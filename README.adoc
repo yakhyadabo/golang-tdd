@@ -1,0 +1,19 @@
+=== Class structure 
+// TODO
+
+=== Public and private methods
+// TODO
+https://medium.com/golangspec/exported-identifiers-in-go-518e93cc98af#.a1xmo3too
+
+=== Package manageent
+// TODO
+
+=== Exception 
+// TODO
+https://gobyexample.com/errors
+
+=== Testing
+// TODO
+https://blog.golang.org/examples
+https://www.golang-book.com/books/intro/12
+
