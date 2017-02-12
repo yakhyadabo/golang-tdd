@@ -7,24 +7,6 @@ import (
 
 var  calculator  = main.Calculator{}
 
-func TestMult(t *testing.T) {
- // var v = calculator.Mult(1,2) 
-  v := calculator.Mult(1,2) 
-  if v != 2 {
-    t.Error("Expected 2, got ", v)
- }
-
-}
-
-func TestFact(t *testing.T) {
- // var v = calculator.Mult(1,2) 
-  v := calculator.Fact(3) 
-  if v != 6 {
-    t.Error("Expected 6, got ", v)
- }
-
-}
-
 func TestAdd(t *testing.T) {
   v := calculator.Add(1,2) 
   if v != 3 {
@@ -37,6 +19,31 @@ func TestSum(t *testing.T) {
   v := calculator.Sum(1,2,3,4) 
   if v != 10 {
     t.Error("Expected 10, got ", v)
+ }
+
+}
+
+func TestMult(t *testing.T) {
+ // var v = calculator.Mult(1,2) 
+  v := calculator.Mult(1,2) 
+  if v != 2 {
+    t.Error("Expected 2, got ", v)
+ }
+
+}
+
+func TestFact(t *testing.T) {
+  v := calculator.Fact(3) 
+  if v != 6 {
+    t.Error("Expected 6, got ", v)
+ }
+
+}
+
+func TestFactZero(t *testing.T) {
+  v := calculator.Fact(0) 
+  if v != 1 {
+    t.Error("Expected 1, got ", v)
  }
 
 }
