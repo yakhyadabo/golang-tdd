@@ -1,4 +1,6 @@
-=== Class structure 
+== Sample TDD using Go
+
+=== Class structure
 TODO
 
 === Public and private methods
