@@ -20,3 +20,17 @@ func TestIsNotPalindrome(t *testing.T) {
 		t.Error("Expected true, got ", result)
 	}
 }
+
+func TestIsPalindromeR(t *testing.T) {
+	result := character_utils.IsPalindromeR("Ele")
+	if !result {
+		t.Error("Expected true, got ", result)
+	}
+}
+
+func TestIsNotPalindromeR(t *testing.T) {
+	result := character_utils.IsPalindromeR("EllEs")
+	if result {
+		t.Error("Expected true, got ", result)
+	}
+}
