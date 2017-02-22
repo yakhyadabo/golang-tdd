@@ -15,14 +15,13 @@ func (Character_Utils) IsPalindrome(word string) bool {
 	return strings.ToUpper(reverse) == strings.ToUpper(word)
 }
 
+func (ch Character_Utils) toUpperString(char byte) string {
+	return strings.ToUpper(string(char))
+}
+
 func (ch Character_Utils) IsPalindromeR(word string) bool {
-	if len(word) <= 1 {
-		return true
-	}
 
-	if strings.ToUpper(string(word[len(word)-1])) == strings.ToUpper(string(word[0])) {
-		return ch.IsPalindromeR(word[1:len(word)-1])
-	}
-
-	return false
+	return len(word) <= 1 ||
+			ch.toUpperString(word[len(word)-1]) == ch.toUpperString(word[0]) &&
+		 	ch.IsPalindromeR(word[1:len(word)-1])
 }
