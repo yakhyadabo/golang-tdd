@@ -8,9 +8,15 @@ import (
 var  character_utils  = main.Character_Utils{}
 
 func TestIsPalindrome(t *testing.T) {
+	result := character_utils.IsPalindrome("Elle")
+	if !result {
+		t.Error("Expected true, got ", result)
+	}
+}
+
+func TestIsNotPalindrome(t *testing.T) {
 	result := character_utils.IsPalindrome("Hello")
 	if result {
 		t.Error("Expected true, got ", result)
 	}
-
 }
