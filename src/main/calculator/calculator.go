@@ -1,4 +1,5 @@
 package main
+
 import (
   "fmt"
   "errors"
@@ -6,6 +7,11 @@ import (
 
 type Calculator struct {
  //  op1, op2 int
+}
+
+func NewCalculator() *Calculator{
+  c := &Calculator{}
+  return c
 }
 
 func (Calculator) Add(x,y int) int {

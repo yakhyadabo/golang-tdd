@@ -2,10 +2,9 @@ package main
 
 import (
   "testing"
-  "../main"
 )
 
-var  calculator  = main.Calculator{}
+var calculator = NewCalculator()
 
 func TestAdd(t *testing.T) {
   v := calculator.Add(1,2) 
@@ -49,7 +48,7 @@ func TestFactZero(t *testing.T) {
 }
 
 func TestDiv(t *testing.T) {
-  v,e := calculator.Div(4,2) 
+  v,e := calculator.Div(4,2)
   if v != 2 || e != nil {
     t.Error("Expected 2, got ", v)
  }
@@ -58,7 +57,7 @@ func TestDiv(t *testing.T) {
 
 
 func TestDivByZero(t *testing.T) {
-  v,e := calculator.Div(4,0) 
+  v,e := calculator.Div(4,0)
   if e == nil {
     t.Error("Exception expected, got ", v)
  }
